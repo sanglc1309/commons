@@ -88,7 +88,7 @@ class ___RadioListDialogState<T extends Data> extends State<__RadioListDialog> {
                 if (widget.onSubmit != null) widget.onSubmit(_selectedItem as Data);
                 pop(context); // To close the dialog
               },
-              child: Text("确定"),
+              child: Text("Xong"),
             ),
           ],
         )
