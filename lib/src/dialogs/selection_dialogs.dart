@@ -163,7 +163,7 @@ class ___SelectionDialogState extends State<__SelectionDialog> {
           height: 5,
         ),
         _filteredList.isEmpty
-            ? Expanded(
+            ? Container(
                 child: AnimatedContainer(
                   duration: Duration(milliseconds: 1000),
                   child: Column(
