@@ -82,14 +82,14 @@ class ___SelectionDialogState extends State<__SelectionDialog> {
                       focusNode: _searchBarFieldFocusNode,
                       controller: _searchBarFieldController,
                       decoration: InputDecoration(
-                        hintText: "Search...",
+                        hintText: "Tìm kiếm...",
                         counterText: "",
                       ),
                       onChanged: (value) {
                         setState(() {
                           _searchQuery = value.trim().toString();
                         });
-                        if (value != null && value.isNotEmpty) {
+                        if (value.isNotEmpty) {
                           setState(() {
                             _filteredList = widget.items
                                 .where((item) => item.title
@@ -179,7 +179,7 @@ class ___SelectionDialogState extends State<__SelectionDialog> {
                         padding: EdgeInsets.all(8),
                       ),
                       Text(
-                        "Empty Collections",
+                        "Trống",
                         textAlign: TextAlign.center,
                       ),
                       SizedBox(
@@ -192,7 +192,7 @@ class ___SelectionDialogState extends State<__SelectionDialog> {
             : AnimatedContainer(
                 duration: Duration(milliseconds: 1000),
                 child: Flexible(
-                  fit: FlexFit.tight,
+                  fit: FlexFit.loose,
                   child: SingleChildScrollView(
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
@@ -232,7 +232,7 @@ class ___SelectionDialogState extends State<__SelectionDialog> {
               ),
               FlatButton(
                 onPressed: () {
-                  if (widget.onSubmit != null) widget.onSubmit(_selectedItems);
+ widget.onSubmit(_selectedItems);
                   pop(context); // To close the dialog
                 },
                 child: Text(widget.submitButtonText ?? "Done"),
