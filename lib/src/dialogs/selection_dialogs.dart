@@ -73,7 +73,7 @@ class ___SelectionDialogState extends State<__SelectionDialog> {
     if (widget.searchable==true) {
       return Row(
         children: <Widget>[
-          Container(
+          Expanded(
             child: _showSearchField
                 ? Padding(
                     padding: const EdgeInsets.only(left: 16.0),
